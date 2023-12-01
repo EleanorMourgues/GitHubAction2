@@ -15,3 +15,6 @@ jobs :
       - name : Checkout
         if: ${{github.ref == 'refs/heads/main'}}
         uses: actions/checkout@v4.1.1
+      - name : déploiement production
+        run : echo "déploiement en production"
+        if : github.event.inputs.envdep == 'prod'
