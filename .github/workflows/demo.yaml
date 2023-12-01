@@ -5,3 +5,10 @@ on :
       envdep :
         description : 'environnement de déploiment'
         required : true
+        default : 'dev'
+jobs :
+  deploy-env : 
+    runs-on : ubuntu-latest
+    steps :
+      - name : demarrage workflow
+        run : echo 'workflow démarré'
