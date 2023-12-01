@@ -11,4 +11,5 @@ jobs :
     runs-on : ubuntu-latest
     steps :
       - name : demarrage workflow
-        run : echo 'workflow démarré'
+        run : echo 'bien dans le main'
+        if : ${{github.refs == 'refs/head/main'}}
