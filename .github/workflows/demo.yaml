@@ -28,3 +28,4 @@ jobs :
         if : github.event.inputs.envdep == 'dev'
       - name : fin workflow
         run : echo "fin de workflow"
+        if: always()
