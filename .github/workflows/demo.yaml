@@ -1,0 +1,7 @@
+name : demo
+on : 
+  workflow_dispatch :
+    inputs :
+      envdep :
+        description : 'environnement de déploiment'
+        required : true
