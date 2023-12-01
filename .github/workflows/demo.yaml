@@ -19,8 +19,12 @@ jobs :
         run : echo "déploiement en production"
         if : github.event.inputs.envdep == 'prod'
       - name : déploiement qualification
-        run : echo "déploiement en qualification"
+        run : | 
+          echo "déploiement en qualification"
+          exit 1
         if : github.event.inputs.envdep == 'qual'
       - name : déploiement developpement
         run : echo "déploiement en developpement"
         if : github.event.inputs.envdep == 'dev'
+      - name : fin workflow
+        run : echo "fin de workflow"
